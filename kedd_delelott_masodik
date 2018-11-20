@@ -29,3 +29,26 @@ ez csak a chain rule
 tolhatunk így parciális deriválást is #nagyonop
 
 nagyjából Taylor sorozok
+
+sok paraméterből kevés kimenet -> felülről lefelé számoljuk a deriváltat #backpropagation (?)
+kevés paraméterből kell sok paraméter -> alulról felfelé költséghatékonyabb
+
+"szokás szerint akkor belefutunk egy NP nehéz problémába"
+automatikus deriválás: pontosabb mint a numerikus és jobban scalable mint a szimbolikus
+
+megvannak a deriváltak, nagyon örülünk
+
+utána iterálunk
+Newton-Rhapson-nal megyek valamilyen minimumba
+skálafaktorral intézzük hogy ne mindig  a  max lépést toljuk -> kell az alpha below:
+w_{n+1} = w_n - alpha df/dw (w_n)
+
+probs:
+rossz indítás és nincs megoldás
+konvergencia can be messed up and we dont go to min
+stack lokális minimumba
+minimum közelében lecsökkenhet a konvergencia sebessége aka lapos minimum
+ha valahol nagy ugrás van a deriváltban az meghülyíti a módszereket
+stb
+
+
