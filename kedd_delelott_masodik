@@ -3,4 +3,29 @@ deriválunk a szerint b szerint és 0át kapunk akkor vagyunk minimumon #magic
 
 költésfüggvény deriváltja megjelenik egyenletrendszerben
 
+"általában az emberek úgy esnek neki egy problémának hogy nem tudják milyen függvényosztályon keresik a megoldást"
 
+sok paraméter esetén szimbolikus deriválás nem megy computational nehézségek miatt
+
+a megoldandó egyenletrendszer általában nem lineáris #sad
+
+van szimbolikus, numerikus és ___ automatikus ___ deriválás
+
+szimbolikus: ahogy matekon
+
+numerikus: kiértékelem közeli pontokban
+
+automatikus:
+pl x=1 értékben szeretném tudni f(x) deriváltját, f(1+epsilon)t kiértékelem, elsőrendű epsilonokat nézem, és megkapom a deriváltat
+f(1+epsilon)=(1+epsilon)(1+epsilon)=1+2epsilon
+ott a válasz, hogy kettő
+epsilon^2=0
+valós számokat kiterjesztjük: x -> x+epsilon
+
+ez csak a chain rule
+
+"mi van ha több változóm van... akarunk egy millió változót, nehogymá" xD
+
+tolhatunk így parciális deriválást is #nagyonop
+
+nagyjából Taylor sorozok
