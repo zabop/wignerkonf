@@ -51,4 +51,102 @@ minimum közelében lecsökkenhet a konvergencia sebessége aka lapos minimum
 ha valahol nagy ugrás van a deriváltban az meghülyíti a módszereket
 stb
 
+ha ekzaktul akarok számolni gradienst, magas N esetén numerikus problémák lesznek
+lehet hogy nem N re kell hanem N>n n re
+sztochasztikus becslés
+n az a batch
+sztochasztikus gradiens módszer
 
+tehetetlenséget is adhatunk az iterációnak
+	~ha egyszer elindulunk valamerre legyen némi lendületünk
+aka vegyük figyelembe az előző lépéseket
+
+ez gyakran jobban működik
+
+kül dimenziók mentén gyakran más skálán van a minimumfüggvény
+
+preskálázó mátrix jó rá
+	~melyik irány mennyire fontos, hátha ezt tudjuk valahonnan
+		~tudjuk ezt becsülni valahonnan?
+			-> okosságot tolunk
+
+alpha rátát hozzáigazítjuk minden irány (dimenzió) mentén
+
+első derivált négyzetét is belevehetjük
+
+Adam optimalizációt csináltunk
+
+milyen függvényeket adjunk kompozícióba?
+lineáris függvényeket kombózok akkor lineáris függvény lesz az eredmény
+kérdés hogy milyen nemlinearitás legyen
+	tanh
+	szigmoid
+	RELU
+
+számít:
+	folytonos és folytonosan differenciálható e vagy nem
+	0 közelében lineáris e vagy sem
+	monoton-e vagy nem
+	olcsó legyen kiszámolni
+
+univerzális approximációs tétel
+	ortogonális függvényekkel toljuk az ipart
+
+azt látjuk hogy minél több nemlinearitást kombinálunk, annál jobban tudjuk megközelíteni a célfüggvényt
+valamire még nem jöttünk rá azt látszik
+
+a neurális háló egy differenciálható függvény kompozíció ami nemlinearitásokat tartalmaz
+nemlinearitás: hogy jól tudjunk közelíteni általános függvényosztályokat
+
+kompozíciós elemek: rétegek
+hidden layer: amelyik nem a bemenet vagy kimenet
+
+tolhatunk POOLt is, pl sok pixelből csinálunk kevesebbet
+pooling csak a szabadsági fokokat csökkenti hogy computational cost jobb legyen
+
+kérdés, hogy milyen költségfüggvényt adjak meg, nem mindig a négyzetösszeg jó
+
+amikor nem átfedő csoportokba kell rakni a képeket: softmax függvény
+bele lehet rakni cross-entropy tagot
+ezek szoktak gyakoriak lenni klasszifikációs hálók végén gyakran
+
+feed forward networks: képfeldolgozási problems
+
+rekurrens neurális hálózatok:
+	belső állapotot updateli lépésről lépésre és ezt is imputként veszi
+	pl szövegfordítás, szóról szóra csinál másik bemenetet ahogy szóról szóra be van neki adva az input
+
+LST: long short-term memory
+	nehéz őket megtanítani
+
+rekurzív  hálók
+
+tanítási módszerek
+supervised learning - felsorolunk bemenet kimenet párokat, ez működik a legjobban
+reinforcement learning - itt ritkán kap visszajelzést, pl táblajáték
+	monte-carlo tree search
+	Q-learning
+unsupervised learning
+	autoencoder-decoder hálózat
+	széles rétegből lemennek a hálók szűkbe, majd megint szélesbe
+	pl kézzel írt számokat akarok bekategorizálni
+	generative adversarial networks
+		egyik generál képeket, egy másiknak el kell dönteni hogy melyik generált és melyik nem
+
+probs:
+hogyan inicializáljuk a súlyokat
+
+a rendszer lehet hogy nem tanul, vagy lehet hogy túltanul
+	underfitting
+	overfitting
+		olyan mintákat ismer fel ami a tanító halmazra jellemző és nem általánosan
+
+három halmazzal szokás dolgozni
+	első:
+		súlyokat inicializálunk
+	második:
+		ellenőrizzük hogy nincs-e under vagy overfitting, pl itt választom ki hogy mikor állítom le a tanítást
+	harmadik:
+		itt mérünk hogy mennyire jó, megnézzük hogy jól tanult-e
+
+kihajigálom a latban sokat nem nyomó súlyokat: pruning
