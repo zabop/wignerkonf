@@ -1,0 +1,50 @@
+supervised learning
+itt mindig kapunk kimenetet
+
+reinforcement learning
+itt csak a végén mondjuk meg hogy nyertünk e vagy nem szóval a végéből kell kitalálnia hogy hol rontotta el
+
+unsupervised learning
+
+
+absztrakt programtér ahol ki tudunk választani programokat
+
+perceptron
+
+deep learning architektúra: sok layer összekötve a következővel
+lineáris nem lineáris lineáris nem lineáris kapcsok
+
+probabilisztikus programok
+program és eloszlás csak másik modelltér
+
+hibafelülete a neurális háló programterének sokkal simább mint mondjuk python
+
+Cox-tétel
+
+Bayes theorem
+
+P( betegség | tüntet ) ~ mi a betegségem ha given tünetem
+
+
+P(betegség|tonet) = P(tünet|betegség)P(betegség)/P(tünet)
+
+posterior=likelihood*prior/evidence
+
+az igazságtáblázatból kihúzzuk a feltételeket nem teljesítőket és a maradék valószínűségeket újra egyre normáljuk
+
+Bayes-i inferencia
+
+A betegség valószínűségét szorozzuk azzal, hogy mekkora valószínűséggel produkálja az adott betegség az egyes tüneteket
+
+p(x,y,theta,D)
+p(x|D)
+p(y|x,D)
+p(theta,Đ)
+p(a_i|s_pD)
+
+közelítő interferencia
+
+posteriort sokszor nehéz egzaktul kiszámolni, helyette tolunk sztochasztikus közelítő módszert
+	pl monte carlo
+
+
