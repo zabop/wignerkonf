@@ -39,12 +39,15 @@ A betegség valószínűségét szorozzuk azzal, hogy mekkora valószínűségge
 p(x,y,theta,D)
 p(x|D)
 p(y|x,D)
-p(theta,Đ)
+p(theta,D)
 p(a_i|s_pD)
 
 közelítő interferencia
 
 posteriort sokszor nehéz egzaktul kiszámolni, helyette tolunk sztochasztikus közelítő módszert
 	pl monte carlo
+
+variációs módszer
+egyszerűsített függvényoszályban keressük a bonyolultabb függyvényoszályban lévő poszteriorfüggvényhez legközelebb esőt
 
 
